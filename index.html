@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Self Defence</title>
+</head>
+
+<body onclick="start()">
+    <div class="main">
+        <div class="left" id="left"></div>
+        <div class="right" id="right"></div>
+    </div>
+</body>
+
+<script>
+    function start() {
+        let isWhite = true;
+        setInterval(function () {
+            if (isWhite) {
+                document.getElementById("right").style.backgroundColor = "red";
+                document.getElementById("left").style.backgroundColor = "white";
+                isWhite = false;
+            } else {
+                document.getElementById("left").style.backgroundColor = "blue";
+                document.getElementById("right").style.backgroundColor = "white";
+                isWhite = true;
+            }
+
+        }, 200);
+    }
+</script>
+
+</html>
